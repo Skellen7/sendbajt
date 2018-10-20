@@ -1,9 +1,105 @@
+
+
+.myButton {
+
+  width: 200px;
+  height: 25px;
+  background-color:#72903C;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #268a16;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 12px ;
+  padding-bottom: 8px;
+  text-decoration:none;
+}
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
+  background:-moz-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+  background:-webkit-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+  background:-o-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+  background:-ms-linear-gradient(top, #5cb811 5%, #77d42a 100%);
+  background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
+  background-color:#5cb811;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
+
+#line hr{
+  border-color: #72903C;
+  opacity: 0.3;
+}
+
+#price{
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size:24px ;
+  margin-top:20px;
+  margin-bottom: 8px;
+}
+#button{
+  margin: auto;
+  text-align: center;
+}
+#description {
+
+  padding: 10px;
+}
+
+#user_box {
+float: left;
+  padding: 10px;
+}
+
+#user_desc{
+text-align: center;
+}
+#user{
+  font-size: 25px;
+  text-align: center;
+}
+
+#rating_box {
+  padding: 10px;
+  float: right;
+}
+
+#rating_desc{
+  text-align: center;
+}
+#rating{
+  font-size: 45px;
+  text-align: center;
+}
+
+
+
 #map {
   height: 89vh;
 }
 
 #test {
   background-color: #9AC33C
+}
+
+.gm-style-iw{
+  box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+  border: 1px solid rgba(72, 181, 233, 0.6);
+  border-radius: 2px 2px 10px 10px;
+  width: 100px;
 }
 
 html, body {
