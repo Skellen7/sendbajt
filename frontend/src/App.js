@@ -6,6 +6,7 @@ import $ from 'jquery'
 
 import MenuExamplePointing from "./components/MenuExamplePointing";
 import Circular from "./components/Circular";
+import ModalDimmer from "./components/ModalDimmer";
 
 
 
@@ -93,7 +94,9 @@ class App extends Component {
             <main>
                 <MenuExamplePointing/>
                 <div id="map"></div>
-                <div id="circular"><Circular onClick={this.functionName}/></div>
+                <div id="circular">
+                    <ModalDimmer/>
+                </div>
             </main>
         );
     }
