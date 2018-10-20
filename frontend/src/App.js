@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import badBroom from './assets/icons/bad_broom.png'
 import { googleMapsConfig } from "./config/googleMapsConfig";
+import MenuExamplePointing from "./components/MenuExamplePointing";
 
 class App extends Component {
     componentDidMount() {
@@ -33,8 +34,10 @@ class App extends Component {
     render() {
         return (
             <main>
+                <MenuExamplePointing/>
                 <div id="map"></div>
             </main>
+
         );
     }
 }

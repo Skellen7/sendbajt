@@ -1,5 +1,9 @@
 #map {
-  height: 100vh;
+  height: 89vh;
+}
+
+#test {
+  background-color: #9AC33C
 }
 
 html, body {
@@ -10,4 +14,19 @@ html, body {
 
 .App {
   text-align: center;
+}
+
+#bigItem {
+    font-size: 22px;
+    color: white;
+    font-family: Ubuntu
+}
+
+#menu {
+    background-color: #9AC33C;
+}
+
+#logo {
+    height: 60px;
+    width: 250px;
 }
