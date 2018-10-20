@@ -5,6 +5,8 @@ import { googleMapsConfig } from "./config/googleMapsConfig";
 import $ from 'jquery'
 
 import MenuExamplePointing from "./components/MenuExamplePointing";
+import $ from 'jquery'
+
 
 class App extends Component {
     componentDidMount() {
