@@ -1,28 +1,43 @@
 package sendbajt.services;
 
-import sendbajt.domain.User;
-import sendbajt.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
+import sendbajt.domain.Job;
+import sendbajt.domain.User;
+import sendbajt.domain.repository.DBUserRepository;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
-@Service
+
+@Component
 public class UserService {
 
-
-    UserRepository userRepository;
-
-    final static Random rand= new Random();
-
-
     @Autowired
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    DBUserRepository userRepository;
+
+
+    public List<User> getAllUsers() {
+        return new ArrayList<>(userRepository.getAllUsers());
     }
 
-    public void update(User user) {
-        userRepository.update(user);
+
+    public void saveUser(User user) {
+        userRepository.createUser(user);
     }
+
+    public User getUser(Integer id) {
+        return userRepository.getUserById(id);
+    }
+
+    public void deleteUser(Integer id) {
+        userRepository.deleteUser(id);
+    }
+
+    public void updateKnight(User user) {
+        userRepository.updateUser(user.getId(), user);
+    }
+
+
 
 }

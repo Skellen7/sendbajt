@@ -1,43 +1,24 @@
 package sendbajt.domain.repository;
 
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import sendbajt.domain.Job;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.annotation.PostConstruct;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.List;
+import java.util.Collection;
+import java.util.Optional;
 
+public interface JobRepository {
 
-@Repository
-public class JobRepository {
+   void createJob(boolean jobTaken, boolean jobOrdered, String latitude, String longtitude, String category, int price, String description, String startHour, String endHour);
 
-    @PersistenceContext
-    private EntityManager em;
+    Collection<Job> getAllJobs();
 
-    @Transactional
-    public void createJob(Job job) {
-        em.persist(job);
-    }
+    void deleteJob(Integer id);
 
-    public List<Job> getAll() {
-        return em.createQuery("from Job", Job.class).getResultList();
-    }
+    void build();
 
-    public void deletJob(Job job) {
-        em.remove(job);
-    }
+    void createJob(Job job);
 
-    @PostConstruct
-    public void init() {
-    }
+    Job getJobById(Integer id);
 
-    public void update(Job job) {
-        em.merge(job);
-    }
-
-    public Job getJob(Integer id) {
-        return em.find(Job.class, id);
-    }
+    default void updateJob(int id, Job job) { throw new NotImplementedException(); }
 }

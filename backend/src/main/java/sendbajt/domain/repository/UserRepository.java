@@ -1,40 +1,27 @@
 package sendbajt.domain.repository;
 
-import org.springframework.transaction.annotation.Transactional;
+
 import sendbajt.domain.User;
-import org.springframework.stereotype.Repository;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.annotation.PostConstruct;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import java.util.List;
+import java.util.Collection;
+import java.util.Optional;
 
-@Repository
-public class UserRepository {
+public interface UserRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    void createUser(String username, String password, int rating);
 
+    Collection<User> getAllUsers();
 
-    @Transactional
-    public void createUser(User user) {
-        em.persist(user);
-    }
+    void deleteUser(Integer id);
 
-    public List<User> getAll() {
-        return em.createQuery("from User", User.class).getResultList();
-    }
+    Optional<User> getUser(String username);
 
-    public void deleteUser(User user) {
-        em.remove(user);
-    }
+    void build();
 
-    @Transactional
-    public void update(User user) {
-        em.merge(user);
-    }
+    void createUser(User user);
 
-    public User getUser(Integer id) {
-        return em.find(User.class, id);
-    }
+    User getUserById(Integer id);
+
+    default void updateUser(int id, User user) { throw new NotImplementedException(); }
 }

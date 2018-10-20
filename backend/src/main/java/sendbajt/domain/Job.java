@@ -59,4 +59,80 @@ public class Job {
                 ", endHour='" + endHour + '\'' +
                 '}';
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public boolean isJobTaken() {
+        return jobTaken;
+    }
+
+    public void setJobTaken(boolean jobTaken) {
+        this.jobTaken = jobTaken;
+    }
+
+    public boolean isJobOrdered() {
+        return jobOrdered;
+    }
+
+    public void setJobOrdered(boolean jobOrdered) {
+        this.jobOrdered = jobOrdered;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongtitude() {
+        return longtitude;
+    }
+
+    public void setLongtitude(String longtitude) {
+        this.longtitude = longtitude;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getStartHour() {
+        return startHour;
+    }
+
+    public void setStartHour(String startHour) {
+        this.startHour = startHour;
+    }
+
+    public String getEndHour() {
+        return endHour;
+    }
+
+    public void setEndHour(String endHour) {
+        this.endHour = endHour;
+    }
 }
