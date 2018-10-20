@@ -1,5 +1,16 @@
+#circular{
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+}
+.ui.button{
+  background-color: #9AC33C !important;
+}
 
+.ui.icon.button, .ui.icon.buttons .button{
+  font-size: 30px !important;
 
+}
 .myButton {
 
   width: 200px;
