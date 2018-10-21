@@ -40,6 +40,4 @@ public class JobService {
     public void updateJob(Job job) {
         jobRepository.updateJob(job.getId(), job);
     }
-
-
 }

@@ -40,20 +40,4 @@ public class MainConfig extends WsConfigurerAdapter {
     public XsdSchema jobsSchema() {
         return new SimpleXsdSchema(new ClassPathResource("jobs.xsd"));
     }
-
-//    @Bean(name = "users")
-//    public DefaultWsdl11Definition defaultWsdl11Definition(@Qualifier("Users") XsdSchema usersSchema) {
-//        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-//        wsdl11Definition.setPortTypeName("Users");
-//        wsdl11Definition.setLocationUri("sendbajt");
-//        wsdl11Definition.setTargetNamespace("sendbajt/users/");
-//        wsdl11Definition.setSchema(usersSchema);
-//        return wsdl11Definition;
-//    }
-//
-//    @Bean
-//    public XsdSchema usersSchema() {
-//        return new SimpleXsdSchema(new ClassPathResource("users.xsd"));
-//    }
-
 }

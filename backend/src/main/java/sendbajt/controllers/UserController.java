@@ -11,14 +11,12 @@ import sendbajt.domain.Job;
 import sendbajt.domain.User;
 import sendbajt.domain.repository.DBJobRepository;
 import sendbajt.domain.repository.DBUserRepository;
-import sendbajt.services.JobService;
 import sendbajt.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javax.validation.Valid;
 import java.util.Collection;
-import java.util.List;
 
 @Controller
 public class UserController {

@@ -37,7 +37,4 @@ public class UserService {
     public void updateKnight(User user) {
         userRepository.updateUser(user.getId(), user);
     }
-
-
-
 }
