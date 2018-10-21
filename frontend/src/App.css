@@ -1,15 +1,20 @@
+.newButton{
+  float: left;
+}
+
 #circular{
   position: fixed;
   bottom: 50px;
   right: 100px;
+  color: white !important;
 }
+
 .ui.button{
   background-color: #9AC33C !important;
 }
 
 .ui.icon.button, .ui.icon.buttons .button{
   font-size: 30px !important;
-
 }
 .myButton {
 
@@ -144,3 +149,14 @@ html, body {
     height: 60px;
     width: 250px;
 }
+
+#jobAdd {
+  height: 200px;
+  width: 400px;
+}
+
+.ui.popup{
+  max-width: 500px !important;
+}
+
+
