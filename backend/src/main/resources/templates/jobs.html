@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Job list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" />
+
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div class="container">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Latitude</td>
+            <td>Longtitude</td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each=" job : ${jobs}">
+            <td th:text="${job.latitude}"></td>
+            <td th:text="${job.longtitude}"></td>
+            <td><a th:href="${'/job?id='+job.id}">Podglad</a></td>
+            <td><a th:href="${'/job/delete/'+job.id}">Usun</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <a href="/newuser">Dodaj nowego usera</a>
+    </div>
+</div>
+</body>
+</html>
