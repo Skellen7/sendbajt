@@ -3,7 +3,7 @@ import '../App.css';
 import badBroom from '../assets/icons/bad_broom.png'
 import {googleMapsConfig} from "../config/googleMapsConfig";
 import $ from 'jquery'
-
+import ModalDimmer from "../components/ModalDimmer";
 import MenuExamplePointing from "../components/MenuExamplePointing";
 
 class Map extends Component {
@@ -90,6 +90,9 @@ class Map extends Component {
             <main>
                 <MenuExamplePointing/>
                 <div id="map"></div>
+                <div id="circular">
+                    <ModalDimmer/>
+                </div>
             </main>
         );
     }

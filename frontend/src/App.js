@@ -8,7 +8,6 @@ import HowItWorks from './components/HowItWorks';
 import StartEarning from './components/StartEarning';
 import Contact from './components/Contact';
 import Map from './components/Map';
-import MenuExamplePointing from "./components/MenuExamplePointing";
 import Circular from "./components/Circular";
 import ModalDimmer from "./components/ModalDimmer";
 
@@ -103,9 +102,9 @@ class App extends Component {
                     <Route path="/contact" component={Contact}/>
                 </Switch>
                 </div>
-                <div id="circular">
-                    <ModalDimmer/>
-                </div>
+                {/*<div id="circular">*/}
+                    {/*<ModalDimmer/>*/}
+                {/*</div>*/}
             </BrowserRouter>
         );
     }
