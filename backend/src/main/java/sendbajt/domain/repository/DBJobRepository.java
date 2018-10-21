@@ -60,4 +60,7 @@ public class DBJobRepository implements JobRepository {
         em.merge(job);
     }
 
+    public Job getFirst() {
+        return em.createQuery("from Job", Job.class).getResultList().get(0);
+    }
 }

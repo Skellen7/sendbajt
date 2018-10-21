@@ -43,7 +43,6 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", rating=" + rating +
-                ", jobs=" + jobs +
                 '}';
     }
 

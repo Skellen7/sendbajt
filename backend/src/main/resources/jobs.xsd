@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="/sendbajt/requests"
-        xmlns:jobns="/sendbajt/requests"
+        targetNamespace="sendbajt/jobs/"
+        xmlns:jobns="sendbajt/jobs/"
         elementFormDefault="qualified">
 
     <element name="jobRequest">
@@ -20,6 +20,24 @@
                 <element name="longtitude" type="string" />
                 <element name="category" type="string" />
                 <element name="job" type="anyType"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="userRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="userResponse">
+        <complexType>
+            <sequence>
+                <element name="id" type="int" />
+                <element name="username" type="string" />
+                <element name="user" type="anyType"/>
             </sequence>
         </complexType>
     </element>
