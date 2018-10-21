@@ -101,10 +101,28 @@ text-align: center;
   text-align: center;
 }
 
-
-
 #map {
   height: 89vh;
+}
+
+#howItWorksImage {
+  height: 70vh;
+  margin-left: 440px;
+}
+
+#startEarningImage {
+  height: 70vh;
+  margin-left: 220px;
+}
+
+#howItWorksHeader {
+  margin-left: 580px;
+  margin-top: 40px;
+}
+
+#howItWorksText {
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 #test {
