@@ -1,19 +1,12 @@
 import React, {Component} from 'react';
-import './App.css';
-import badBroom from './assets/icons/bad_broom.png'
-import { googleMapsConfig } from "./config/googleMapsConfig";
+import '../App.css';
+import badBroom from '../assets/icons/bad_broom.png'
+import {googleMapsConfig} from "../config/googleMapsConfig";
 import $ from 'jquery'
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import HowItWorks from './components/HowItWorks';
-import StartEarning from './components/StartEarning';
-import Contact from './components/Contact';
-import Map from './components/Map';
-import MenuExamplePointing from "./components/MenuExamplePointing";
-import Circular from "./components/Circular";
-import ModalDimmer from "./components/ModalDimmer";
 
+import MenuExamplePointing from "../components/MenuExamplePointing";
 
-class App extends Component {
+class Map extends Component {
     componentDidMount() {
         this.renderMap();
     }
@@ -68,18 +61,18 @@ class App extends Component {
             icon: badBroomIcon,
             title: ''
         });
-        marker.addListener('click', function() {
+        marker.addListener('click', function () {
             infowindow.open(map, marker);
         });
 
-        window.google.maps.event.addListener(map, 'click', function() {
+        window.google.maps.event.addListener(map, 'click', function () {
             infowindow.close();
         });
 
-        window.google.maps.event.addListener(infowindow, 'domready', function() {
+        window.google.maps.event.addListener(infowindow, 'domready', function () {
 
             var iwOuter = $('.gm-style-iw');
-            iwOuter.css("background-color","#9AC33C")
+            iwOuter.css("background-color", "#9AC33C")
 
             var iwBackground = iwOuter.prev();
 
@@ -94,19 +87,10 @@ class App extends Component {
 
     render() {
         return (
-            <BrowserRouter>
-                <div className="container">
-                <Switch>
-                    <Route exact path="/" component={Map} />
-                    <Route exact path="/howitworks" component={HowItWorks}/>
-                    <Route exact path="/startearning" component={StartEarning}/>
-                    <Route path="/contact" component={Contact}/>
-                </Switch>
-                </div>
-                <div id="circular">
-                    <ModalDimmer/>
-                </div>
-            </BrowserRouter>
+            <main>
+                <MenuExamplePointing/>
+                <div id="map"></div>
+            </main>
         );
     }
 }
@@ -120,4 +104,4 @@ function loadScript(url) {
     index.parentNode.insertBefore(script, index)
 }
 
-export default App;
+export default Map;
