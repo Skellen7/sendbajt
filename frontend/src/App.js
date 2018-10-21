@@ -382,7 +382,7 @@ class App extends Component {
             '<div id="rating_desc">Ocena</div>' +
             '<div id="rating">*****</div>' +
             '</div>' +
-            '<div style="clear: both"></div>' +
+            '<div style="clear: both"></div>'+
             '<div id="line"> <hr/></div>' +
             '<div id="description_desc">Opis</div>' +
             '<div id="description">Mam do wyniesienia koło trzech worków śmieci. Nie sa duze, a klucz do smieci wrzucam pod wycieraczke</div>' +
