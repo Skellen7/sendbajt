@@ -2,6 +2,10 @@
   float: left;
 }
 
+.root{
+  background-color: #2a95bf;
+}
+
 #circular{
   position: fixed;
   bottom: 50px;
@@ -160,7 +164,7 @@ html, body {
 }
 
 #menu {
-    background-color: #9AC33C;
+    background-color: #2a95bf;
 }
 
 #logo {
@@ -176,5 +180,20 @@ html, body {
 .ui.popup{
   max-width: 500px !important;
 }
+
+
+#map1 {
+  float: left;
+  width: 85%;
+}
+#list1{
+  background-color: #2a95bf;
+  float: left;
+  width: 15%;
+}
+#main_menu {
+  width: 100%;
+}
+
 
 
