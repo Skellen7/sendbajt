@@ -19,29 +19,18 @@ export default class MenuExamplePointing extends Component {
         return (
             <div className="container">
                 <Menu id="menu" pointing>
-                    <img id="logo" src={require('../assets/logos/logo_white.png')}></img>
-                    <Link to="/">
-                        <Menu.Item id="bigItem" name='map' active={activeItem === 'map'}
-                                   onClick={this.handleItemClick}/>
-                    </Link>
+                    <img id="logo" src={require('../assets/logos/logo.png')}></img>
                     <Link to="/howitworks">
                         <Menu.Item id="bigItem"
-                                   name='how it works'
+                                   name='History overview'
                                    active={activeItem === 'how it works'}
                                    onClick={this.handleItemClick}
                         />
                     </Link>
                     <Link to="/startearning">
                         <Menu.Item id="bigItem"
-                                   name='start earning'
+                                   name='Back to account'
                                    active={activeItem === 'start earning'}
-                                   onClick={this.handleItemClick}
-                        />
-                    </Link>
-                    <Link to="/contact">
-                        <Menu.Item id="bigItem"
-                                   name='contact'
-                                   active={activeItem === 'contact'}
                                    onClick={this.handleItemClick}
                         />
                     </Link>
