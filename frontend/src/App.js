@@ -6,6 +6,8 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Map from './components/Map';
 import dollarIconLight from './assets/icons/dollarIconLight.png'
 import dollarIconDark from './assets/icons/dollarIconDark.png'
+import ListExampleCelled from "./components/ListExampleCelled";
+import MenuExamplePointing from "./components/MenuExamplePointing";
 
 
 
@@ -94,13 +96,21 @@ class App extends Component {
 
     render() {
         return (
-            <BrowserRouter>
-                <div className="container">
-                <Switch>
-                    <Route exact path="/" component={Map} />
-                </Switch>
+            <div>
+                <div id="main_menu">
+                    <MenuExamplePointing/>
                 </div>
-            </BrowserRouter>
+
+                <div id="list1">
+                    <ListExampleCelled/>
+                </div>
+
+                <div id="map1">
+                    <Map/>
+                </div>
+
+
+            </div>
         );
     }
 }

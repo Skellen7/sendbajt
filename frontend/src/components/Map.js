@@ -80,7 +80,6 @@ class Map extends Component {
     render() {
         return (
             <main>
-                <MenuExamplePointing/>
                 <div id="map"></div>
             </main>
         );
